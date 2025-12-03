@@ -34,6 +34,7 @@ builder.Services.AddAuthentication(options =>
     .AddIdentityCookies();
 
 builder.Services.AddIdentityCore<CarRentalManagrmentUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<CarRentalManagrmentContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();

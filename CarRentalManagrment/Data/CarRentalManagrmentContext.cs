@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using CarRentalManagrment.Data;
 using CarRentalManagrment.Configurations.Entities;
+using CarRentalManagement.Configurations.Entities;
 
 namespace CarRentalManagrment.Data
 {
@@ -23,6 +24,9 @@ namespace CarRentalManagrment.Data
             builder.ApplyConfiguration(new ColourSeed());
             builder.ApplyConfiguration(new MakeSeed());
             builder.ApplyConfiguration(new ModelSeed());
+            builder.ApplyConfiguration(new UserSeed());
+            builder.ApplyConfiguration(new UserRoleSeed());
+            builder.ApplyConfiguration(new RoleSeed());
 
         }
 
